@@ -12,6 +12,11 @@ app = Flask(__name__)
 def hello_world():
     return "Hello World, this api runs a simple Meross Gateway owned by Jeroen Evens!"
 
+@app.route("/testauth")
+@require_appkey
+def test_authentication():
+    return "Authentication successfull!"
+
 @app.route('/meross/<name>/<action>')
 @require_appkey
 def meross_off(name, action):
