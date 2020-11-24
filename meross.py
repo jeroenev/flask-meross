@@ -8,7 +8,6 @@ EMAIL = os.environ.get('MEROSS_EMAIL') or "DEFAULT_EMAIL"
 PASSWORD = os.environ.get('MEROSS_PASSWORD') or "DEFAULT_PASS"
 
 async def meross_action(name="phonecharger", action="off"):
-    return "works"
     # Setup the HTTP client API from user-password
     http_api_client = await MerossHttpClient.async_from_user_password(email=EMAIL, password=PASSWORD)
 

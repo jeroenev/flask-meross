@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "Hello World!"
+    return "Hello World, this api runs a simple Meross Gateway owned by Jeroen Evens!"
 
 @app.route('/meross/<name>/<action>')
 @require_appkey
